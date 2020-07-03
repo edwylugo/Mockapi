@@ -21,6 +21,7 @@ class ListEventsViewController: UIViewController {
               fatalError("init(coder:) has not been implemented")
        }
     
+    
     @IBOutlet var tableView: UITableView! {
         didSet {
                    tableView.delegate = self
@@ -28,16 +29,39 @@ class ListEventsViewController: UIViewController {
                }
     }
     
+    @IBOutlet var searchBar: UISearchBar! {
+           didSet {
+            searchBar.delegate = self
+            searchBar.searchTextField.textColor = UIColor.black
+           }
+       }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "MockiAPI"
         setupUI()
-        tableView.reloadData()
+        setupBindings()
     }
     
     func setupUI() {
            // Retorna a célula da interface
            let nib = UINib(nibName: "ListEventTableViewCell", bundle: nil)
            tableView.register(nib, forCellReuseIdentifier: ListEventTableViewCell.reuseIdentifier)
+        
+        searchBar.placeholder = "Pesquisar Eventos..."
+        searchBar.searchTextField.borderStyle = .none
+        searchBar.searchTextField.backgroundColor = UIColor.white
+        searchBar.searchTextField.layer.cornerRadius = 10
+        searchBar.searchTextField.clipsToBounds = true
+        searchBar.searchBarStyle = .default
+        addToolBar(searchBar.searchTextField)
+        
        }
     
     func setupBindings() {
@@ -48,12 +72,49 @@ class ListEventsViewController: UIViewController {
                }
            }
     }
+    
+    func addToolBar(_ textField: UITextField) {
+           // ToolBar
+        let toolBar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.bounds.width, height: CGFloat(44))))
+           toolBar.barStyle = .default
+           toolBar.isTranslucent = true
+           toolBar.tintColor = UIColor(red: 92 / 255, green: 216 / 255, blue: 255 / 255, alpha: 1)
+           toolBar.sizeToFit()
 
+           let title = ""
+
+           // Adding Button ToolBar in UIPickerView
+           let doneButton = UIBarButtonItem(title: "OK", style: .plain, target: self, action: #selector(ListEventsViewController.doneClick))
+        doneButton.tintColor = UIColor.black
+           let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+           let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(ListEventsViewController.cancelClick))
+        cancelButton.tintColor = UIColor.black
+
+           let labelSelecione = UIBarButtonItem(title: title, style: .plain, target: nil, action: nil) // 7
+           labelSelecione.tintColor = UIColor.white
+
+           toolBar.setItems([cancelButton, spaceButton, labelSelecione, spaceButton, doneButton], animated: false)
+           toolBar.isUserInteractionEnabled = true
+           textField.inputAccessoryView = toolBar
+       }
+    
+      @objc func doneClick() {
+           self.view.endEditing(true)
+       }
+
+       @objc func cancelClick() {
+          self.view.endEditing(true)
+       }
+
+    override var prefersStatusBarHidden: Bool {
+            return false
+    }
+    
 }
 
 extension ListEventsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return viewModel.dataSource.value.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -63,11 +124,33 @@ extension ListEventsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
          guard let cell = tableView.dequeueReusableCell(withIdentifier: ListEventTableViewCell.reuseIdentifier,
                                                               for: indexPath) as? ListEventTableViewCell else { return UITableViewCell() }
-        
         return cell
-        
-        
     }
     
-    
+    func tableView(_: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+           guard let cell = cell as? ListEventTableViewCell else { return }
+           guard viewModel.dataSource.value.indices.contains(indexPath.row) else { return }
+           let event = viewModel.dataSource.value[indexPath.row]
+           cell.setup(viewModel: event)
+       }
+
+}
+
+extension ListEventsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.filterEvent(search: searchBar.text)
+        tableView.reloadData()
+        view.endEditing(true)
+    }
+
+    func searchBarCancelButtonClicked(_: UISearchBar) {
+        viewModel.filterEvent(search: nil)
+        tableView.reloadData()
+        view.endEditing(true)
+    }
+
+    func searchBar(_: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterEvent(search: searchText)
+        tableView.reloadData()
+    }
 }

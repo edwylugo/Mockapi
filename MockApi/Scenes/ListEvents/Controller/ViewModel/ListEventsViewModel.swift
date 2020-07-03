@@ -28,8 +28,6 @@ protocol ListEventViewModelProtocol {
 
 struct ListEventsViewModel: ListEventViewModelProtocol {
     private weak var navigationDelegate: ListEventNavigationProtocol?
-    private var eventsFilter: Observable<[Event]> = Observable([])
-    private var eventsNoFilter: Observable<[Event]> = Observable([])
     var isLoading: Observable<Bool>
     var isPullRefresh: Observable<Bool>
     var error: Observable<Error?>
@@ -42,6 +40,9 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
             return eventsNoFilter
         }
     }
+    
+    private var eventsFilter: Observable<[Event]> = Observable([])
+    private var eventsNoFilter: Observable<[Event]> = Observable([])
     
     init(navigationDelegate: ListEventNavigationProtocol? = nil) {
         self.navigationDelegate = navigationDelegate
@@ -88,6 +89,17 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     }
     
     mutating func filterEvent(search: String?) {
+        if let text = search?.uppercased(), text != "" {
+                      filterEnable = true
+
+                       eventsFilter.value = eventsNoFilter.value.filter { events -> Bool in
+                        events.title.uppercased().contains(text.uppercased())
+                      }
+
+                  } else {
+                      filterEnable = false
+                       eventsFilter.value = []
+                  }
         
     }
     

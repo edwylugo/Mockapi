@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListEventTableViewCell: UITableViewCell {
     
@@ -23,6 +24,21 @@ class ListEventTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setup(viewModel: Event) {
+        
+        let price = "\(viewModel.price)"
+        let newFormatPrice = price.replacingOccurrences(of: ".", with: ",")
+        
+        lbDate.text = viewModel.data
+        lbPrice.text = "R$\(newFormatPrice)"
+        titleEvent.text = viewModel.title
+        
+        if let url = URL(string: "\(viewModel.image)") {
+           ivEvent.kf.setImage(with: url)
+        }
+        
     }
     
 }
