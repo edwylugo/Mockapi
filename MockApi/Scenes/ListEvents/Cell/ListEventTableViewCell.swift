@@ -37,6 +37,8 @@ class ListEventTableViewCell: UITableViewCell {
         
         if let url = URL(string: "\(viewModel.image)") {
            ivEvent.kf.setImage(with: url)
+        } else {
+            ivEvent.image = UIImage(named: "south")
         }
         
     }

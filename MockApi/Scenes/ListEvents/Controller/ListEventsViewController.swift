@@ -24,9 +24,9 @@ class ListEventsViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView! {
         didSet {
-                   tableView.delegate = self
-                   tableView.dataSource = self
-               }
+           tableView.delegate = self
+           tableView.dataSource = self
+        }
     }
     
     @IBOutlet var searchBar: UISearchBar! {
@@ -35,6 +35,9 @@ class ListEventsViewController: UIViewController {
             searchBar.searchTextField.textColor = UIColor.black
            }
        }
+    
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var refreshControl = UIRefreshControl()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +50,7 @@ class ListEventsViewController: UIViewController {
         self.title = "MockiAPI"
         setupUI()
         setupBindings()
+        addPullToRefresh()
     }
     
     func setupUI() {
@@ -71,6 +75,23 @@ class ListEventsViewController: UIViewController {
                    self.tableView.reloadData()
                }
            }
+        
+        viewModel.isLoading.bind { [weak self] isLoading in
+                  guard let self = self else { return }
+                  DispatchQueue.main.async {
+                      isLoading ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
+                      self.tableView.reloadData()
+                  }
+              }
+
+              viewModel.isPullRefresh.bind { [weak self] isLoading in
+                  guard let self = self else { return }
+                  DispatchQueue.main.async {
+                      isLoading ? print() : self.refreshControl.endRefreshing()
+                      self.tableView.reloadData()
+                  }
+              }
+        
     }
     
     func addToolBar(_ textField: UITextField) {
@@ -99,12 +120,31 @@ class ListEventsViewController: UIViewController {
        }
     
       @objc func doneClick() {
-           self.view.endEditing(true)
+        viewModel.filterEvent(search: searchBar.searchTextField.text)
+        tableView.reloadData()
+        self.view.endEditing(true)
        }
 
        @objc func cancelClick() {
           self.view.endEditing(true)
        }
+    
+    private func addPullToRefresh() {
+           refreshControl.tintColor = .gray
+           refreshControl.addTarget(viewModel, action: #selector(ListEventsViewController.pullRefresh), for: UIControl.Event.valueChanged)
+           tableView.addSubview(refreshControl)
+       }
+
+       @objc private func pullRefresh() {
+           searchBar.searchTextField.text = ""
+           viewModel.filterEvent(search: nil)
+           viewModel.pullRefresh()
+       }
+    
+      override func viewDidDisappear(_ animated: Bool) {
+          super.viewDidDisappear(animated)
+          viewModel.pullRefresh()
+      }
 
     override var prefersStatusBarHidden: Bool {
             return false
@@ -152,5 +192,11 @@ extension ListEventsViewController: UISearchBarDelegate {
     func searchBar(_: UISearchBar, textDidChange searchText: String) {
         viewModel.filterEvent(search: searchText)
         tableView.reloadData()
+    }
+}
+
+extension ListEventsViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_: UIScrollView) {
+        view.endEditing(true)
     }
 }

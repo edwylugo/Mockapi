@@ -53,24 +53,34 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     }
     
     func setDataSource() {
+        
+        self.isLoading.value = true
+        
         MockREST.loadBook(onComplete: { events in
             self.dataSource.value = events.self
+        self.isLoading.value = false
         }) { error in
             DispatchQueue.main.async {
                 print(error)
                 switch error {
                 case .url:
+                    self.isLoading.value = false
                     print("Não foi possível carregar a URL")
                 case let .taskerror(error):
+                    self.isLoading.value = false
                     CommonToUI.sharedInstance.showAlert("Mocki:", "Para visualizar os Eventos é necessário estar conectado com a internet.", nil)
                     print("\(error)")
                 case let .noResponse(error):
+                    self.isLoading.value = false
                     CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Serviço fora do ar. Entre em contato com a equipe técnica para visualizar os eventos.", nil)
                 case .noData:
+                    self.isLoading.value = false
                     print("Não foi possível carregar os dados para visualizar os Eventos.")
                 case let .responseStatusCode(code):
+                    self.isLoading.value = false
                     CommonToUI.sharedInstance.showAlert("Mocki:", "Verificamos que o servidor está fora do ar (Status: \(code).", nil)
                 case let .invalidJSON(error):
+                    self.isLoading.value = false
                     CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Uma nova estrutura foi criada pela equipe de desenvolvedores. Entre em contato com a equipe técnica.", nil)
                 }
             }
@@ -79,7 +89,37 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     }
     
     func pullRefresh() {
-        
+        self.isPullRefresh.value = true
+        MockREST.loadBook(onComplete: { events in
+             self.dataSource.value = events.self
+             self.isPullRefresh.value = false
+         }) { error in
+             DispatchQueue.main.async {
+                 print(error)
+                 switch error {
+                 case .url:
+                    self.isPullRefresh.value = false
+                     print("Não foi possível carregar a URL")
+                 case let .taskerror(error):
+                    self.isPullRefresh.value = false
+                     CommonToUI.sharedInstance.showAlert("Mocki:", "Para visualizar os Eventos é necessário estar conectado com a internet.", nil)
+                     print("\(error)")
+                 case let .noResponse(error):
+                    self.isPullRefresh.value = false
+                     CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Serviço fora do ar. Entre em contato com a equipe técnica para visualizar os eventos.", nil)
+                 case .noData:
+                    self.isPullRefresh.value = false
+                     print("Não foi possível carregar os dados para visualizar os Eventos.")
+                 case let .responseStatusCode(code):
+                    self.isPullRefresh.value = false
+                     CommonToUI.sharedInstance.showAlert("Mocki:", "Verificamos que o servidor está fora do ar (Status: \(code).", nil)
+                 case let .invalidJSON(error):
+                    self.isPullRefresh.value = false
+                     CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Uma nova estrutura foi criada pela equipe de desenvolvedores. Entre em contato com a equipe técnica.", nil)
+                 }
+             }
+             
+         }
     }
     
     func didSelectItemAt(indexPath: IndexPath) {
