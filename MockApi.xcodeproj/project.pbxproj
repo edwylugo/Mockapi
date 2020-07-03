@@ -24,6 +24,7 @@
 		59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */; };
 		59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1324AFCB9C00016502 /* NavigationController.swift */; };
 		59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */; };
+		59222E2024AFD15500016502 /* CommonToUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1F24AFD15500016502 /* CommonToUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		59222E1324AFCB9C00016502 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
+		59222E1F24AFD15500016502 /* CommonToUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonToUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				59222E1024AFCB6000016502 /* Coordinator */,
 				59222E0624AFCAEF00016502 /* Scenes */,
 				59222E1524AFCC5500016502 /* Resources */,
+				59222E1D24AFD12000016502 /* Manager */,
 			);
 			path = MockApi;
 			sourceTree = "<group>";
@@ -196,6 +199,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		59222E1D24AFD12000016502 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1E24AFD13900016502 /* Utils */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		59222E1E24AFD13900016502 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1F24AFD15500016502 /* CommonToUI.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,6 +295,7 @@
 				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
 				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
+				59222E2024AFD15500016502 /* CommonToUI.swift in Sources */,
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
 				59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */,
