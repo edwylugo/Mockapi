@@ -15,6 +15,14 @@
 		59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59222DF024AFBFB200016502 /* LaunchScreen.storyboard */; };
 		59222DFB24AFC19600016502 /* MockREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFA24AFC19600016502 /* MockREST.swift */; };
 		59222DFE24AFC1BE00016502 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFD24AFC1BE00016502 /* Event.swift */; };
+		59222E0024AFC9A600016502 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFF24AFC9A600016502 /* Observable.swift */; };
+		59222E0324AFC9F700016502 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0224AFC9F700016502 /* EventManager.swift */; };
+		59222E0524AFCA8D00016502 /* event-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 59222E0424AFCA8D00016502 /* event-response.json */; };
+		59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0724AFCB0600016502 /* ListEventsViewController.swift */; };
+		59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E0824AFCB0600016502 /* ListEventsViewController.xib */; };
+		59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0D24AFCB4500016502 /* InitialCoordinator.swift */; };
+		59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */; };
+		59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1324AFCB9C00016502 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		59222DF324AFBFB200016502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59222DFA24AFC19600016502 /* MockREST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockREST.swift; sourceTree = "<group>"; };
 		59222DFD24AFC1BE00016502 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		59222DFF24AFC9A600016502 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		59222E0224AFC9F700016502 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		59222E0424AFCA8D00016502 /* event-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "event-response.json"; sourceTree = "<group>"; };
+		59222E0724AFCB0600016502 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
+		59222E0824AFCB0600016502 /* ListEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventsViewController.xib; sourceTree = "<group>"; };
+		59222E0D24AFCB4500016502 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
+		59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		59222E1324AFCB9C00016502 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +76,11 @@
 		59222DE424AFBFAD00016502 /* MockApi */ = {
 			isa = PBXGroup;
 			children = (
+				59222E0124AFC9D100016502 /* Stubs */,
 				59222DFC24AFC1AA00016502 /* Model */,
 				59222DF924AFC0DD00016502 /* API */,
+				59222E1024AFCB6000016502 /* Coordinator */,
+				59222E0624AFCAEF00016502 /* Scenes */,
 				59222DE524AFBFAD00016502 /* AppDelegate.swift */,
 				59222DE724AFBFAD00016502 /* SceneDelegate.swift */,
 				59222DE924AFBFAD00016502 /* ViewController.swift */,
@@ -69,6 +88,7 @@
 				59222DEE24AFBFB200016502 /* Assets.xcassets */,
 				59222DF024AFBFB200016502 /* LaunchScreen.storyboard */,
 				59222DF324AFBFB200016502 /* Info.plist */,
+				59222DFF24AFC9A600016502 /* Observable.swift */,
 			);
 			path = MockApi;
 			sourceTree = "<group>";
@@ -87,6 +107,50 @@
 				59222DFD24AFC1BE00016502 /* Event.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59222E0124AFC9D100016502 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0424AFCA8D00016502 /* event-response.json */,
+				59222E0224AFC9F700016502 /* EventManager.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		59222E0624AFCAEF00016502 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0C24AFCB3000016502 /* InitialCoordinator */,
+				59222E0B24AFCB1D00016502 /* ListEvents */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		59222E0B24AFCB1D00016502 /* ListEvents */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0724AFCB0600016502 /* ListEventsViewController.swift */,
+				59222E0824AFCB0600016502 /* ListEventsViewController.xib */,
+			);
+			path = ListEvents;
+			sourceTree = "<group>";
+		};
+		59222E0C24AFCB3000016502 /* InitialCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0D24AFCB4500016502 /* InitialCoordinator.swift */,
+			);
+			path = InitialCoordinator;
+			sourceTree = "<group>";
+		};
+		59222E1024AFCB6000016502 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */,
+				59222E1324AFCB9C00016502 /* NavigationController.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +212,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */,
+				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
 				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
+				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
 				59222DED24AFBFAD00016502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,10 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */,
+				59222E0324AFC9F700016502 /* EventManager.swift in Sources */,
+				59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */,
+				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
+				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
 				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
+				59222E0024AFC9A600016502 /* Observable.swift in Sources */,
 				59222DFE24AFC1BE00016502 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
