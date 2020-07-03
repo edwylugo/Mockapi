@@ -52,7 +52,29 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     }
     
     func setDataSource() {
-        
+        MockREST.loadBook(onComplete: { events in
+            self.dataSource.value = events.self
+        }) { error in
+            DispatchQueue.main.async {
+                print(error)
+                switch error {
+                case .url:
+                    print("Não foi possível carregar a URL")
+                case let .taskerror(error):
+                    CommonToUI.sharedInstance.showAlert("Mocki:", "Para visualizar os Eventos é necessário estar conectado com a internet.", nil)
+                    print("\(error)")
+                case let .noResponse(error):
+                    CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Serviço fora do ar. Entre em contato com a equipe técnica para visualizar os eventos.", nil)
+                case .noData:
+                    print("Não foi possível carregar os dados para visualizar os Eventos.")
+                case let .responseStatusCode(code):
+                    CommonToUI.sharedInstance.showAlert("Mocki:", "Verificamos que o servidor está fora do ar (Status: \(code).", nil)
+                case let .invalidJSON(error):
+                    CommonToUI.sharedInstance.showAlert(error.localizedDescription, "Uma nova estrutura foi criada pela equipe de desenvolvedores. Entre em contato com a equipe técnica.", nil)
+                }
+            }
+            
+        }
     }
     
     func pullRefresh() {

@@ -17,7 +17,13 @@ final class InitialCoordinator: Coordinator {
    }
 
    func start() {
-       let viewController = ListEventsViewController()
+       let viewModel = ListEventsViewModel(navigationDelegate: self)
+       let viewController = ListEventsViewController(viewModel: viewModel)
        presenter.pushViewController(viewController, animated: true)
    }
+}
+
+
+extension InitialCoordinator: ListEventNavigationProtocol {
+    func gotoEventDetail(events: Event) {}
 }

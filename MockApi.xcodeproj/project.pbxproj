@@ -25,6 +25,8 @@
 		59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1324AFCB9C00016502 /* NavigationController.swift */; };
 		59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */; };
 		59222E2024AFD15500016502 /* CommonToUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1F24AFD15500016502 /* CommonToUI.swift */; };
+		59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2124AFD25400016502 /* ListEventTableViewCell.swift */; };
+		59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2224AFD25400016502 /* ListEventTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		59222E1324AFCB9C00016502 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
 		59222E1F24AFD15500016502 /* CommonToUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonToUI.swift; sourceTree = "<group>"; };
+		59222E2124AFD25400016502 /* ListEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventTableViewCell.swift; sourceTree = "<group>"; };
+		59222E2224AFD25400016502 /* ListEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 		59222E1724AFCEFD00016502 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				59222E2124AFD25400016502 /* ListEventTableViewCell.swift */,
+				59222E2224AFD25400016502 /* ListEventTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
 				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
 				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
+				59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */,
 				59222DED24AFBFAD00016502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +299,7 @@
 				59222E0324AFC9F700016502 /* EventManager.swift in Sources */,
 				59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */,
 				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
+				59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */,
 				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
 				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,

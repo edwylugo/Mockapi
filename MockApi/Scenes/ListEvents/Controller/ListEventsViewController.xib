@@ -18,20 +18,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-hf-pm0">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-hf-pm0">
+                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fg3-6H-16N">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="JwV-hf-pm0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="2tW-6i-Kh8"/>
                 <constraint firstItem="JwV-hf-pm0" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="96o-DO-B5a"/>
+                <constraint firstItem="JwV-hf-pm0" firstAttribute="top" secondItem="Fg3-6H-16N" secondAttribute="bottom" constant="8" id="Lgt-63-q8x"/>
+                <constraint firstItem="Fg3-6H-16N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SCc-yX-Yap"/>
                 <constraint firstItem="JwV-hf-pm0" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Wyr-Fr-Dqk"/>
+                <constraint firstItem="Fg3-6H-16N" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="erW-yC-0ho"/>
                 <constraint firstItem="JwV-hf-pm0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ldK-NP-ecM"/>
+                <constraint firstItem="Fg3-6H-16N" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="v8F-7o-aSQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="138.40000000000001" y="153.37331334332833"/>
+            <point key="canvasLocation" x="138.40000000000001" y="152.47376311844079"/>
         </view>
     </objects>
 </document>
