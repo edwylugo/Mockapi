@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,11 @@
 		59222E2024AFD15500016502 /* CommonToUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1F24AFD15500016502 /* CommonToUI.swift */; };
 		59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2124AFD25400016502 /* ListEventTableViewCell.swift */; };
 		59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2224AFD25400016502 /* ListEventTableViewCell.xib */; };
+		59222E2824AFF79800016502 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2624AFF79800016502 /* DetailEventViewController.swift */; };
+		59222E2924AFF79800016502 /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2724AFF79800016502 /* DetailEventViewController.xib */; };
+		59222E2F24AFF7E800016502 /* DetailEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */; };
+		59222E3224AFF80200016502 /* DetailEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */; };
+		59222E3324AFF80200016502 /* DetailsEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */; };
 		DEAA68A1DE199923CA561A0F /* Pods_MockApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		59222E1F24AFD15500016502 /* CommonToUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonToUI.swift; sourceTree = "<group>"; };
 		59222E2124AFD25400016502 /* ListEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventTableViewCell.swift; sourceTree = "<group>"; };
 		59222E2224AFD25400016502 /* ListEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventTableViewCell.xib; sourceTree = "<group>"; };
+		59222E2624AFF79800016502 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
+		59222E2724AFF79800016502 /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
+		59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewModel.swift; sourceTree = "<group>"; };
+		59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventTableViewCell.swift; sourceTree = "<group>"; };
+		59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsEventTableViewCell.xib; sourceTree = "<group>"; };
 		770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,6 +156,7 @@
 				59222E0C24AFCB3000016502 /* InitialCoordinator */,
 				59222E1624AFCCD300016502 /* Start */,
 				59222E0B24AFCB1D00016502 /* ListEvents */,
+				59222E2524AFF75D00016502 /* DetailEvents */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -236,13 +247,48 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		59222E2524AFF75D00016502 /* DetailEvents */ = {
+			isa = PBXGroup;
+			children = (
+				59222E2A24AFF7A900016502 /* Cell */,
+				59222E2B24AFF7AF00016502 /* Controller */,
+			);
+			path = DetailEvents;
+			sourceTree = "<group>";
+		};
+		59222E2A24AFF7A900016502 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */,
+				59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		59222E2B24AFF7AF00016502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59222E2D24AFF7D000016502 /* ViewModel */,
+				59222E2624AFF79800016502 /* DetailEventViewController.swift */,
+				59222E2724AFF79800016502 /* DetailEventViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59222E2D24AFF7D000016502 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8597F2A42F438585FC96704D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0A1DF2056A7A5DC1F8A075F1 /* Pods-MockApi.debug.xcconfig */,
 				45BF92CC4185F3DE4CE61BD3 /* Pods-MockApi.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -307,6 +353,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */,
+				59222E3324AFF80200016502 /* DetailsEventTableViewCell.xib in Resources */,
+				59222E2924AFF79800016502 /* DetailEventViewController.xib in Resources */,
 				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
 				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
 				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
@@ -370,8 +418,11 @@
 				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
 				59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */,
 				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
+				59222E2F24AFF7E800016502 /* DetailEventViewModel.swift in Sources */,
+				59222E2824AFF79800016502 /* DetailEventViewController.swift in Sources */,
 				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
+				59222E3224AFF80200016502 /* DetailEventTableViewCell.swift in Sources */,
 				59222E2024AFD15500016502 /* CommonToUI.swift in Sources */,
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,

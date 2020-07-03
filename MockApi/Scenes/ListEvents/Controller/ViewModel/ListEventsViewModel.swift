@@ -54,11 +54,11 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     
     func setDataSource() {
         
-        self.isLoading.value = true
+        isLoading.value = true
         
         MockREST.loadBook(onComplete: { events in
             self.dataSource.value = events.self
-        self.isLoading.value = false
+            self.isLoading.value = false
         }) { error in
             DispatchQueue.main.async {
                 print(error)
@@ -89,7 +89,8 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     }
     
     func pullRefresh() {
-        self.isPullRefresh.value = true
+        isPullRefresh.value = true
+        
         MockREST.loadBook(onComplete: { events in
              self.dataSource.value = events.self
              self.isPullRefresh.value = false

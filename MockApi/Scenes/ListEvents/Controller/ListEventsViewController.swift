@@ -54,6 +54,7 @@ class ListEventsViewController: UIViewController {
     }
     
     func setupUI() {
+        
            // Retorna a célula da interface
            let nib = UINib(nibName: "ListEventTableViewCell", bundle: nil)
            tableView.register(nib, forCellReuseIdentifier: ListEventTableViewCell.reuseIdentifier)
@@ -65,6 +66,8 @@ class ListEventsViewController: UIViewController {
         searchBar.searchTextField.clipsToBounds = true
         searchBar.searchBarStyle = .default
         addToolBar(searchBar.searchTextField)
+        
+        activityIndicator.isHidden = true
         
        }
     
