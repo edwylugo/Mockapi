@@ -9,6 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func goListEvents(_ sender: Any) {
+           let coordinator = InitialCoordinator(presenter: self.navigationController!)
+           coordinator.start()
+       }
 
     override func viewDidLoad() {
         super.viewDidLoad()

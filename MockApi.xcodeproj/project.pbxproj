@@ -23,6 +23,7 @@
 		59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0D24AFCB4500016502 /* InitialCoordinator.swift */; };
 		59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */; };
 		59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1324AFCB9C00016502 /* NavigationController.swift */; };
+		59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		59222E0D24AFCB4500016502 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
 		59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		59222E1324AFCB9C00016502 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,19 +78,17 @@
 		59222DE424AFBFAD00016502 /* MockApi */ = {
 			isa = PBXGroup;
 			children = (
+				59222DE524AFBFAD00016502 /* AppDelegate.swift */,
+				59222DE724AFBFAD00016502 /* SceneDelegate.swift */,
+				59222DEB24AFBFAD00016502 /* Main.storyboard */,
+				59222DF324AFBFB200016502 /* Info.plist */,
+				59222DFF24AFC9A600016502 /* Observable.swift */,
 				59222E0124AFC9D100016502 /* Stubs */,
 				59222DFC24AFC1AA00016502 /* Model */,
 				59222DF924AFC0DD00016502 /* API */,
 				59222E1024AFCB6000016502 /* Coordinator */,
 				59222E0624AFCAEF00016502 /* Scenes */,
-				59222DE524AFBFAD00016502 /* AppDelegate.swift */,
-				59222DE724AFBFAD00016502 /* SceneDelegate.swift */,
-				59222DE924AFBFAD00016502 /* ViewController.swift */,
-				59222DEB24AFBFAD00016502 /* Main.storyboard */,
-				59222DEE24AFBFB200016502 /* Assets.xcassets */,
-				59222DF024AFBFB200016502 /* LaunchScreen.storyboard */,
-				59222DF324AFBFB200016502 /* Info.plist */,
-				59222DFF24AFC9A600016502 /* Observable.swift */,
+				59222E1524AFCC5500016502 /* Resources */,
 			);
 			path = MockApi;
 			sourceTree = "<group>";
@@ -122,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				59222E0C24AFCB3000016502 /* InitialCoordinator */,
+				59222E1624AFCCD300016502 /* Start */,
 				59222E0B24AFCB1D00016502 /* ListEvents */,
 			);
 			path = Scenes;
@@ -130,8 +131,8 @@
 		59222E0B24AFCB1D00016502 /* ListEvents */ = {
 			isa = PBXGroup;
 			children = (
-				59222E0724AFCB0600016502 /* ListEventsViewController.swift */,
-				59222E0824AFCB0600016502 /* ListEventsViewController.xib */,
+				59222E1724AFCEFD00016502 /* Cell */,
+				59222E1924AFCF0D00016502 /* Controller */,
 			);
 			path = ListEvents;
 			sourceTree = "<group>";
@@ -151,6 +152,48 @@
 				59222E1324AFCB9C00016502 /* NavigationController.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		59222E1524AFCC5500016502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59222DEE24AFBFB200016502 /* Assets.xcassets */,
+				59222DF024AFBFB200016502 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59222E1624AFCCD300016502 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				59222DE924AFBFAD00016502 /* ViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		59222E1724AFCEFD00016502 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		59222E1924AFCF0D00016502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1A24AFCF1C00016502 /* ViewModel */,
+				59222E0724AFCB0600016502 /* ListEventsViewController.swift */,
+				59222E0824AFCB0600016502 /* ListEventsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59222E1A24AFCF1C00016502 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +278,7 @@
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
+				59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */,
 				59222E0024AFC9A600016502 /* Observable.swift in Sources */,
 				59222DFE24AFC1BE00016502 /* Event.swift in Sources */,
 			);
