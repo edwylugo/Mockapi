@@ -22,6 +22,9 @@ class MockREST {
 // Endereço da API
    private static let basePath = "http://5b840ba5db24a100142dcd8c.mockapi.io/api/events"
     
+// Endereço Checkin
+   private static let checkinPath = "http://5b840ba5db24a100142dcd8c.mockapi.io/api/checkin"
+    
 // Arquivo de configurações
    private static let configuration: URLSessionConfiguration = {
        let config = URLSessionConfiguration.default
