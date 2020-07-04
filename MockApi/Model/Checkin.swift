@@ -8,21 +8,8 @@
 
 import Foundation
 
-struct Checkin: Codable {
-    let eventId: String
-    let name: String
-    let email: String
-    
-    enum CodingKeys: String, CodingKey {
-        case eventId = "eventId"
-        case name = "name"
-        case email = "email"
-       }
-
-       init(from decoder: Decoder) throws {
-           let container = try decoder.container(keyedBy: CodingKeys.self)
-            eventId = try container.decode(String.self, forKey: .eventId)
-            name = try container.decode(String.self, forKey: .name)
-            email = try container.decode(String.self, forKey: .email)            
-       }
+class Checkin: Codable {
+    var eventId: String? = ""
+    var name: String? = ""
+    var email: String? = ""
 }

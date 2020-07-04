@@ -55,7 +55,7 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
         
         isLoading.value = true
         
-        MockREST.loadBook(onComplete: { events in
+        MockREST.loadEvent(onComplete: { events in
             self.dataSource.value = events.ordenationsToEvents()
             self.isLoading.value = false
         }) { error in
@@ -90,7 +90,7 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
     func pullRefresh() {
         isPullRefresh.value = true
         
-        MockREST.loadBook(onComplete: { events in
+        MockREST.loadEvent(onComplete: { events in
             self.dataSource.value = events.ordenationsToEvents()
              self.isPullRefresh.value = false
          }) { error in

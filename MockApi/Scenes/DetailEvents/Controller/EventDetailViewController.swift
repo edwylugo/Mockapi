@@ -12,6 +12,10 @@ class EventDetailViewController: UIViewController {
 
     private var viewModel: EventDetailViewModelProtocol
     
+    var checkin: Checkin!
+    var name: String? = ""
+    var email: String? = ""
+    
     init(viewModel: EventDetailViewModelProtocol) {
               self.viewModel = viewModel
               super.init(nibName: "EventDetailViewController", bundle: nil)
@@ -29,15 +33,8 @@ class EventDetailViewController: UIViewController {
     }
     
     @IBAction func btCheckin(_ sender: Any) {
-        let modalViewController = ModalViewController(navigationDelegate: self)
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        modalViewController.modalTransitionStyle = .crossDissolve
-        modalViewController.popoverPresentationController?.permittedArrowDirections = .any
-        navigationController?.present(modalViewController, animated: true, completion: nil)
-        
+        alertWithTF()
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +47,75 @@ class EventDetailViewController: UIViewController {
       let nib = UINib(nibName: "EventDetailTableViewCell", bundle: nil)
       tableView.register(nib, forCellReuseIdentifier: EventDetailTableViewCell.reuseIdentifier)
       tableView.reloadData()
+    }
+    
+    
+    func sendCheckin() {
+           if checkin == nil {
+               checkin = Checkin()
+           }
+        
+             checkin.eventId  = "\(viewModel.events.id)"
+             checkin.name = "\(name?.description ?? "")"
+             checkin.email = "\(email?.description ?? "")"
+             print("checkin.eventId: \(viewModel.events.id)")
+             print("checkin.name: \(name?.description ?? "")")
+             print("checkin.email: \(email?.description ?? "")")
+        
+            MockREST.sendCheckin(sendCheck: self.checkin) { _ in
+                   print("Checkin efetuado com sucesso")
+            }
+    }
+    
+    func alertWithTF() {
+        
+        let alert = UIAlertController(title: "MockAPI", message: "Preencha os dados:", preferredStyle: UIAlertController.Style.alert )
+        
+        alert.addAction(UIAlertAction(title: "Check-in", style: .default, handler: { _ in
+            let textField = alert.textFields![0] as UITextField
+            let textField2 = alert.textFields![1] as UITextField
+            if textField.text != "" {
+                //Read TextFields text data
+                print(textField.text!)
+                print("TF 1 : \(textField.text!)")
+            } else {
+                print("TF 1 is Empty...")
+            }
+
+            if textField2.text != "" {
+                print(textField2.text!)
+                print("TF 2 : \(textField2.text!)")
+            } else {
+                print("TF 2 is Empty...")
+            }
+            
+            print("Modal Confirmação")
+            let modalViewController = ModalViewController(navigationDelegate: self)
+            modalViewController.modalPresentationStyle = .overCurrentContext
+            modalViewController.modalTransitionStyle = .crossDissolve
+            modalViewController.popoverPresentationController?.permittedArrowDirections = .any
+            self.navigationController?.present(modalViewController, animated: true, completion: nil)
+            
+        }))
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Informe seu nome"
+            textField.textColor = .red
+        }
+
+        alert.addTextField { (textField) in
+            textField.placeholder = "Informe seu e-mail"
+            textField.textColor = .blue
+        }
+        
+        //OR single line action
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: { _ in
+            self.dismiss(animated: true, completion: nil)
+            print("Alert Cancelado")
+        }))
+
+        self.present(alert, animated:true, completion: nil)
+
     }
 
 }
@@ -81,6 +147,7 @@ extension EventDetailViewController: UITableViewDelegate, UITableViewDataSource 
 extension EventDetailViewController: ModalNavigationDelegate {
     func yesAction() {
         dismiss(animated: true, completion: nil)
+        sendCheckin()
     }
     
     func noAction() {
