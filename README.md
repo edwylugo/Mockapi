@@ -4,7 +4,7 @@ Criar um aplicativo em Swift que consuma uma REST API e exiba uma listagem de ev
 
 ### Features ###
 
-List Cards Category collections.  
+List events and Checkin.  
 
 ### IOS App Version Control ###
 
