@@ -42,12 +42,14 @@ class ListEventsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationItem.setHidesBackButton(true, animated: true)
+//        self.navigationItem.setHidesBackButton(true, animated: true)
+//        navigationController?.setNavigationBarHidden(false, animated: false)
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "MockiAPI"
+        self.title = "Eventos"
         setupUI()
         setupBindings()
         addPullToRefresh()
@@ -149,9 +151,6 @@ class ListEventsViewController: UIViewController {
           viewModel.pullRefresh()
       }
 
-    override var prefersStatusBarHidden: Bool {
-            return false
-    }
     
 }
 
@@ -177,6 +176,14 @@ extension ListEventsViewController: UITableViewDelegate, UITableViewDataSource {
            cell.setup(viewModel: event)
        }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didSelectItemAt(indexPath: indexPath)
+        print(indexPath.row)
+        let eventSelected = viewModel.dataSource.value[indexPath.row]
+        print(eventSelected)
+    }
+    
 }
 
 extension ListEventsViewController: UISearchBarDelegate {

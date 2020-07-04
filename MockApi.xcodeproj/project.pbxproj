@@ -27,11 +27,14 @@
 		59222E2024AFD15500016502 /* CommonToUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1F24AFD15500016502 /* CommonToUI.swift */; };
 		59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2124AFD25400016502 /* ListEventTableViewCell.swift */; };
 		59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2224AFD25400016502 /* ListEventTableViewCell.xib */; };
-		59222E2824AFF79800016502 /* DetailEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2624AFF79800016502 /* DetailEventViewController.swift */; };
-		59222E2924AFF79800016502 /* DetailEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2724AFF79800016502 /* DetailEventViewController.xib */; };
-		59222E2F24AFF7E800016502 /* DetailEventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */; };
-		59222E3224AFF80200016502 /* DetailEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */; };
-		59222E3324AFF80200016502 /* DetailsEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */; };
+		59222E3A24B010F900016502 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3824B010F900016502 /* EventDetailViewController.swift */; };
+		59222E3B24B010F900016502 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E3924B010F900016502 /* EventDetailViewController.xib */; };
+		59222E3D24B0115D00016502 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3C24B0115D00016502 /* EventDetailViewModel.swift */; };
+		59222E4124B0D54000016502 /* TabBarAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3F24B0D54000016502 /* TabBarAppViewController.swift */; };
+		59222E4224B0D54000016502 /* TabBarAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4024B0D54000016502 /* TabBarAppViewController.xib */; };
+		59222E4424B0D6DE00016502 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4324B0D6DE00016502 /* TabBarViewModel.swift */; };
+		59222E4724B0D87C00016502 /* EventDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */; };
+		59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */; };
 		DEAA68A1DE199923CA561A0F /* Pods_MockApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,11 +63,14 @@
 		59222E1F24AFD15500016502 /* CommonToUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonToUI.swift; sourceTree = "<group>"; };
 		59222E2124AFD25400016502 /* ListEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventTableViewCell.swift; sourceTree = "<group>"; };
 		59222E2224AFD25400016502 /* ListEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventTableViewCell.xib; sourceTree = "<group>"; };
-		59222E2624AFF79800016502 /* DetailEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewController.swift; sourceTree = "<group>"; };
-		59222E2724AFF79800016502 /* DetailEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailEventViewController.xib; sourceTree = "<group>"; };
-		59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventViewModel.swift; sourceTree = "<group>"; };
-		59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEventTableViewCell.swift; sourceTree = "<group>"; };
-		59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsEventTableViewCell.xib; sourceTree = "<group>"; };
+		59222E3824B010F900016502 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		59222E3924B010F900016502 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
+		59222E3C24B0115D00016502 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		59222E3F24B0D54000016502 /* TabBarAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAppViewController.swift; sourceTree = "<group>"; };
+		59222E4024B0D54000016502 /* TabBarAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarAppViewController.xib; sourceTree = "<group>"; };
+		59222E4324B0D6DE00016502 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewCell.swift; sourceTree = "<group>"; };
+		59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailTableViewCell.xib; sourceTree = "<group>"; };
 		770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,6 +161,7 @@
 			children = (
 				59222E0C24AFCB3000016502 /* InitialCoordinator */,
 				59222E1624AFCCD300016502 /* Start */,
+				59222E3E24B0D50A00016502 /* TabBarApp */,
 				59222E0B24AFCB1D00016502 /* ListEvents */,
 				59222E2524AFF75D00016502 /* DetailEvents */,
 			);
@@ -216,19 +223,11 @@
 		59222E1924AFCF0D00016502 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				59222E1A24AFCF1C00016502 /* ViewModel */,
+				59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */,
 				59222E0724AFCB0600016502 /* ListEventsViewController.swift */,
 				59222E0824AFCB0600016502 /* ListEventsViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		59222E1A24AFCF1C00016502 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		59222E1D24AFD12000016502 /* Manager */ = {
@@ -259,8 +258,8 @@
 		59222E2A24AFF7A900016502 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				59222E3024AFF80200016502 /* DetailEventTableViewCell.swift */,
-				59222E3124AFF80200016502 /* DetailsEventTableViewCell.xib */,
+				59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */,
+				59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -268,19 +267,21 @@
 		59222E2B24AFF7AF00016502 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				59222E2D24AFF7D000016502 /* ViewModel */,
-				59222E2624AFF79800016502 /* DetailEventViewController.swift */,
-				59222E2724AFF79800016502 /* DetailEventViewController.xib */,
+				59222E3824B010F900016502 /* EventDetailViewController.swift */,
+				59222E3924B010F900016502 /* EventDetailViewController.xib */,
+				59222E3C24B0115D00016502 /* EventDetailViewModel.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		59222E2D24AFF7D000016502 /* ViewModel */ = {
+		59222E3E24B0D50A00016502 /* TabBarApp */ = {
 			isa = PBXGroup;
 			children = (
-				59222E2E24AFF7E800016502 /* DetailEventViewModel.swift */,
+				59222E3F24B0D54000016502 /* TabBarAppViewController.swift */,
+				59222E4024B0D54000016502 /* TabBarAppViewController.xib */,
+				59222E4324B0D6DE00016502 /* TabBarViewModel.swift */,
 			);
-			path = ViewModel;
+			path = TabBarApp;
 			sourceTree = "<group>";
 		};
 		8597F2A42F438585FC96704D /* Pods */ = {
@@ -352,14 +353,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59222E4224B0D54000016502 /* TabBarAppViewController.xib in Resources */,
 				59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */,
-				59222E3324AFF80200016502 /* DetailsEventTableViewCell.xib in Resources */,
-				59222E2924AFF79800016502 /* DetailEventViewController.xib in Resources */,
 				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
 				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
 				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
 				59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */,
 				59222DED24AFBFAD00016502 /* Main.storyboard in Resources */,
+				59222E3B24B010F900016502 /* EventDetailViewController.xib in Resources */,
+				59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,19 +417,21 @@
 				59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */,
 				59222E0324AFC9F700016502 /* EventManager.swift in Sources */,
 				59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */,
+				59222E4124B0D54000016502 /* TabBarAppViewController.swift in Sources */,
 				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
 				59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */,
 				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
-				59222E2F24AFF7E800016502 /* DetailEventViewModel.swift in Sources */,
-				59222E2824AFF79800016502 /* DetailEventViewController.swift in Sources */,
 				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
+				59222E3D24B0115D00016502 /* EventDetailViewModel.swift in Sources */,
+				59222E4724B0D87C00016502 /* EventDetailTableViewCell.swift in Sources */,
 				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
-				59222E3224AFF80200016502 /* DetailEventTableViewCell.swift in Sources */,
+				59222E4424B0D6DE00016502 /* TabBarViewModel.swift in Sources */,
 				59222E2024AFD15500016502 /* CommonToUI.swift in Sources */,
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
 				59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */,
 				59222E0024AFC9A600016502 /* Observable.swift in Sources */,
+				59222E3A24B010F900016502 /* EventDetailViewController.swift in Sources */,
 				59222DFE24AFC1BE00016502 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

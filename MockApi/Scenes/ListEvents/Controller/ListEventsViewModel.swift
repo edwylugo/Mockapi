@@ -10,24 +10,23 @@ import Foundation
 
 protocol ListEventNavigationProtocol: AnyObject {
     func gotoEventDetail(events: Event)
+    func gotoBackMenuSync()
 }
 
 protocol ListEventViewModelProtocol {
     var dataSource: Observable<[Event]> { get }
-
-    func didSelectItemAt(indexPath: IndexPath)
-    mutating func filterEvent(search: String?)
-
+    var error: Observable<Error?> { get }
+    func setDataSource()
     var isLoading: Observable<Bool> { get }
     var isPullRefresh: Observable<Bool> { get }
-    var error: Observable<Error?> { get }
-
-    func setDataSource()
     func pullRefresh()
+    func didSelectItemAt(indexPath: IndexPath)
+    mutating func filterEvent(search: String?)
 }
 
 struct ListEventsViewModel: ListEventViewModelProtocol {
     private weak var navigationDelegate: ListEventNavigationProtocol?
+    
     var isLoading: Observable<Bool>
     var isPullRefresh: Observable<Bool>
     var error: Observable<Error?>
@@ -57,7 +56,7 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
         isLoading.value = true
         
         MockREST.loadBook(onComplete: { events in
-            self.dataSource.value = events.self
+            self.dataSource.value = events.ordenationsToEvents()
             self.isLoading.value = false
         }) { error in
             DispatchQueue.main.async {
@@ -87,12 +86,12 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
             
         }
     }
-    
+        
     func pullRefresh() {
         isPullRefresh.value = true
         
         MockREST.loadBook(onComplete: { events in
-             self.dataSource.value = events.self
+            self.dataSource.value = events.ordenationsToEvents()
              self.isPullRefresh.value = false
          }) { error in
              DispatchQueue.main.async {
@@ -143,6 +142,12 @@ struct ListEventsViewModel: ListEventViewModelProtocol {
                   }
         
     }
-    
-    
+}
+
+extension Sequence where Iterator.Element == Event {
+    func ordenationsToEvents() -> [Event] {
+        return self.sorted {
+            $0.title < $1.title
+        }
+    }
 }

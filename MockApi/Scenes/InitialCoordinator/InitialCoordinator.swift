@@ -17,13 +17,7 @@ final class InitialCoordinator: Coordinator {
    }
 
    func start() {
-       let viewModel = ListEventsViewModel(navigationDelegate: self)
-       let viewController = ListEventsViewController(viewModel: viewModel)
+       let viewController = TabBarAppViewController()
        presenter.pushViewController(viewController, animated: true)
    }
-}
-
-
-extension InitialCoordinator: ListEventNavigationProtocol {
-    func gotoEventDetail(events: Event) {}
 }
