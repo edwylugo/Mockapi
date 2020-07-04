@@ -35,6 +35,10 @@
 		59222E4424B0D6DE00016502 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4324B0D6DE00016502 /* TabBarViewModel.swift */; };
 		59222E4724B0D87C00016502 /* EventDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */; };
 		59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */; };
+		59222E4C24B0DF6D00016502 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4A24B0DF0600016502 /* Roboto-Black.ttf */; };
+		59222E5024B0EA7900016502 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4E24B0EA7900016502 /* ModalViewController.swift */; };
+		59222E5124B0EA7900016502 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4F24B0EA7900016502 /* ModalViewController.xib */; };
+		59222E5324B0EFEB00016502 /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E5224B0EFEB00016502 /* Checkin.swift */; };
 		DEAA68A1DE199923CA561A0F /* Pods_MockApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +75,10 @@
 		59222E4324B0D6DE00016502 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewCell.swift; sourceTree = "<group>"; };
 		59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailTableViewCell.xib; sourceTree = "<group>"; };
+		59222E4A24B0DF0600016502 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		59222E4E24B0EA7900016502 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		59222E4F24B0EA7900016502 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		59222E5224B0EFEB00016502 /* Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
 		770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -143,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				59222DFD24AFC1BE00016502 /* Event.swift */,
+				59222E5224B0EFEB00016502 /* Checkin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +173,7 @@
 				59222E3E24B0D50A00016502 /* TabBarApp */,
 				59222E0B24AFCB1D00016502 /* ListEvents */,
 				59222E2524AFF75D00016502 /* DetailEvents */,
+				59222E4D24B0EA0100016502 /* Modal */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -197,6 +207,7 @@
 		59222E1524AFCC5500016502 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				59222E4924B0DEE800016502 /* Fonts */,
 				59222DEE24AFBFB200016502 /* Assets.xcassets */,
 				59222DF024AFBFB200016502 /* LaunchScreen.storyboard */,
 			);
@@ -284,6 +295,23 @@
 			path = TabBarApp;
 			sourceTree = "<group>";
 		};
+		59222E4924B0DEE800016502 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4A24B0DF0600016502 /* Roboto-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		59222E4D24B0EA0100016502 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4E24B0EA7900016502 /* ModalViewController.swift */,
+				59222E4F24B0EA7900016502 /* ModalViewController.xib */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		8597F2A42F438585FC96704D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -358,8 +386,10 @@
 				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
 				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
 				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
+				59222E5124B0EA7900016502 /* ModalViewController.xib in Resources */,
 				59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */,
 				59222DED24AFBFAD00016502 /* Main.storyboard in Resources */,
+				59222E4C24B0DF6D00016502 /* Roboto-Black.ttf in Resources */,
 				59222E3B24B010F900016502 /* EventDetailViewController.xib in Resources */,
 				59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */,
 			);
@@ -416,6 +446,7 @@
 			files = (
 				59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */,
 				59222E0324AFC9F700016502 /* EventManager.swift in Sources */,
+				59222E5324B0EFEB00016502 /* Checkin.swift in Sources */,
 				59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */,
 				59222E4124B0D54000016502 /* TabBarAppViewController.swift in Sources */,
 				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
@@ -430,6 +461,7 @@
 				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
 				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
 				59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */,
+				59222E5024B0EA7900016502 /* ModalViewController.swift in Sources */,
 				59222E0024AFC9A600016502 /* Observable.swift in Sources */,
 				59222E3A24B010F900016502 /* EventDetailViewController.swift in Sources */,
 				59222DFE24AFC1BE00016502 /* Event.swift in Sources */,

@@ -7,8 +7,6 @@
 //
 
 import Foundation
-import UIKit
-
 
 struct Event: Codable {
     let people: [People]
