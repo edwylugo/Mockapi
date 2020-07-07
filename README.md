@@ -1,29 +1,38 @@
-# README #
+### Objective ###
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Criar um aplicativo em Swift que consuma uma REST API e exiba uma listagem de eventos. Cada item da lista deve permitir acesso à detalhes do evento No detalhe do evento é importante exibir suas informações e opções de check-in e compartilhamento
 
-### What is this repository for? ###
+### Features ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+List events and Checkin.  
 
-### How do I get set up? ###
+### IOS App Version Control ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+| Version | Build |  Developer | Branch |
+| :---: | :---: | :---: | :---: | 
+| 1.0 | 1 | Edwy Lugo | develop |
 
-### Contribution guidelines ###
+### Requirements ###
 
-* Writing tests
-* Code review
-* Other guidelines
+* Xcode 11.5
 
-### Who do I talk to? ###
+### Download ###
+* Xcode: https://developer.apple.com/download/more/
 
-* Repo owner or admin
-* Other community or team contact
+### Installation and Settings ###
+
+* pod 'Kingfisher'
+
+## Follow the instructions to run the project. ##
+1. Clone the repository using Sourcetree or GitHub Desktop
+2. Run via finish and locate the project folder and install the pods
+3. Install Xcode 11.5
+4. Open Xcode, click on 'Open ... and select the MockApi.xcworkspace project.
+5. Run the app. Click 'Run'.
+
+### Construction Technician ###
+
+* Edwy Lugo - iOS Developer 
+* E-mail: edwylugo@gmail.com
+* Whatsapp: (51) 9 97158732
+

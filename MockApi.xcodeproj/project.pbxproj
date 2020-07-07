@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DE524AFBFAD00016502 /* AppDelegate.swift */; };
+		59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DE724AFBFAD00016502 /* SceneDelegate.swift */; };
+		59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DE924AFBFAD00016502 /* ViewController.swift */; };
+		59222DED24AFBFAD00016502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59222DEB24AFBFAD00016502 /* Main.storyboard */; };
+		59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59222DEE24AFBFB200016502 /* Assets.xcassets */; };
+		59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59222DF024AFBFB200016502 /* LaunchScreen.storyboard */; };
+		59222DFB24AFC19600016502 /* MockREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFA24AFC19600016502 /* MockREST.swift */; };
+		59222DFE24AFC1BE00016502 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFD24AFC1BE00016502 /* Event.swift */; };
+		59222E0024AFC9A600016502 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222DFF24AFC9A600016502 /* Observable.swift */; };
+		59222E0324AFC9F700016502 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0224AFC9F700016502 /* EventManager.swift */; };
+		59222E0524AFCA8D00016502 /* event-response.json in Resources */ = {isa = PBXBuildFile; fileRef = 59222E0424AFCA8D00016502 /* event-response.json */; };
+		59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0724AFCB0600016502 /* ListEventsViewController.swift */; };
+		59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E0824AFCB0600016502 /* ListEventsViewController.xib */; };
+		59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E0D24AFCB4500016502 /* InitialCoordinator.swift */; };
+		59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */; };
+		59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1324AFCB9C00016502 /* NavigationController.swift */; };
+		59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */; };
+		59222E2024AFD15500016502 /* CommonToUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E1F24AFD15500016502 /* CommonToUI.swift */; };
+		59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E2124AFD25400016502 /* ListEventTableViewCell.swift */; };
+		59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E2224AFD25400016502 /* ListEventTableViewCell.xib */; };
+		59222E3A24B010F900016502 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3824B010F900016502 /* EventDetailViewController.swift */; };
+		59222E3B24B010F900016502 /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E3924B010F900016502 /* EventDetailViewController.xib */; };
+		59222E3D24B0115D00016502 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3C24B0115D00016502 /* EventDetailViewModel.swift */; };
+		59222E4124B0D54000016502 /* TabBarAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E3F24B0D54000016502 /* TabBarAppViewController.swift */; };
+		59222E4224B0D54000016502 /* TabBarAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4024B0D54000016502 /* TabBarAppViewController.xib */; };
+		59222E4424B0D6DE00016502 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4324B0D6DE00016502 /* TabBarViewModel.swift */; };
+		59222E4724B0D87C00016502 /* EventDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */; };
+		59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */; };
+		59222E4C24B0DF6D00016502 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4A24B0DF0600016502 /* Roboto-Black.ttf */; };
+		59222E5024B0EA7900016502 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E4E24B0EA7900016502 /* ModalViewController.swift */; };
+		59222E5124B0EA7900016502 /* ModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59222E4F24B0EA7900016502 /* ModalViewController.xib */; };
+		59222E5324B0EFEB00016502 /* Checkin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59222E5224B0EFEB00016502 /* Checkin.swift */; };
+		DEAA68A1DE199923CA561A0F /* Pods_MockApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A1DF2056A7A5DC1F8A075F1 /* Pods-MockApi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockApi.debug.xcconfig"; path = "Target Support Files/Pods-MockApi/Pods-MockApi.debug.xcconfig"; sourceTree = "<group>"; };
+		45BF92CC4185F3DE4CE61BD3 /* Pods-MockApi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MockApi.release.xcconfig"; path = "Target Support Files/Pods-MockApi/Pods-MockApi.release.xcconfig"; sourceTree = "<group>"; };
+		59222DE224AFBFAD00016502 /* MockApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59222DE524AFBFAD00016502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		59222DE724AFBFAD00016502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		59222DE924AFBFAD00016502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		59222DEC24AFBFAD00016502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		59222DEE24AFBFB200016502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		59222DF124AFBFB200016502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		59222DF324AFBFB200016502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59222DFA24AFC19600016502 /* MockREST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockREST.swift; sourceTree = "<group>"; };
+		59222DFD24AFC1BE00016502 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		59222DFF24AFC9A600016502 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		59222E0224AFC9F700016502 /* EventManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		59222E0424AFCA8D00016502 /* event-response.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "event-response.json"; sourceTree = "<group>"; };
+		59222E0724AFCB0600016502 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
+		59222E0824AFCB0600016502 /* ListEventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventsViewController.xib; sourceTree = "<group>"; };
+		59222E0D24AFCB4500016502 /* InitialCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialCoordinator.swift; sourceTree = "<group>"; };
+		59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		59222E1324AFCB9C00016502 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
+		59222E1F24AFD15500016502 /* CommonToUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonToUI.swift; sourceTree = "<group>"; };
+		59222E2124AFD25400016502 /* ListEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventTableViewCell.swift; sourceTree = "<group>"; };
+		59222E2224AFD25400016502 /* ListEventTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListEventTableViewCell.xib; sourceTree = "<group>"; };
+		59222E3824B010F900016502 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		59222E3924B010F900016502 /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
+		59222E3C24B0115D00016502 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		59222E3F24B0D54000016502 /* TabBarAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAppViewController.swift; sourceTree = "<group>"; };
+		59222E4024B0D54000016502 /* TabBarAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarAppViewController.xib; sourceTree = "<group>"; };
+		59222E4324B0D6DE00016502 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
+		59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailTableViewCell.swift; sourceTree = "<group>"; };
+		59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailTableViewCell.xib; sourceTree = "<group>"; };
+		59222E4A24B0DF0600016502 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		59222E4E24B0EA7900016502 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		59222E4F24B0EA7900016502 /* ModalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalViewController.xib; sourceTree = "<group>"; };
+		59222E5224B0EFEB00016502 /* Checkin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkin.swift; sourceTree = "<group>"; };
+		770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MockApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59222DDF24AFBFAD00016502 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEAA68A1DE199923CA561A0F /* Pods_MockApi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CE6B2519A215A8C5C4222DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				770BC1C2F29A3B81D5EC7876 /* Pods_MockApi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59222DD924AFBFAD00016502 = {
+			isa = PBXGroup;
+			children = (
+				59222DE424AFBFAD00016502 /* MockApi */,
+				59222DE324AFBFAD00016502 /* Products */,
+				8597F2A42F438585FC96704D /* Pods */,
+				1CE6B2519A215A8C5C4222DF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		59222DE324AFBFAD00016502 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59222DE224AFBFAD00016502 /* MockApi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		59222DE424AFBFAD00016502 /* MockApi */ = {
+			isa = PBXGroup;
+			children = (
+				59222DE524AFBFAD00016502 /* AppDelegate.swift */,
+				59222DE724AFBFAD00016502 /* SceneDelegate.swift */,
+				59222DEB24AFBFAD00016502 /* Main.storyboard */,
+				59222DF324AFBFB200016502 /* Info.plist */,
+				59222DFF24AFC9A600016502 /* Observable.swift */,
+				59222E0124AFC9D100016502 /* Stubs */,
+				59222DFC24AFC1AA00016502 /* Model */,
+				59222DF924AFC0DD00016502 /* API */,
+				59222E1024AFCB6000016502 /* Coordinator */,
+				59222E0624AFCAEF00016502 /* Scenes */,
+				59222E1524AFCC5500016502 /* Resources */,
+				59222E1D24AFD12000016502 /* Manager */,
+			);
+			path = MockApi;
+			sourceTree = "<group>";
+		};
+		59222DF924AFC0DD00016502 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				59222DFA24AFC19600016502 /* MockREST.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		59222DFC24AFC1AA00016502 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				59222DFD24AFC1BE00016502 /* Event.swift */,
+				59222E5224B0EFEB00016502 /* Checkin.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		59222E0124AFC9D100016502 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0424AFCA8D00016502 /* event-response.json */,
+				59222E0224AFC9F700016502 /* EventManager.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		59222E0624AFCAEF00016502 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0C24AFCB3000016502 /* InitialCoordinator */,
+				59222E1624AFCCD300016502 /* Start */,
+				59222E3E24B0D50A00016502 /* TabBarApp */,
+				59222E0B24AFCB1D00016502 /* ListEvents */,
+				59222E2524AFF75D00016502 /* DetailEvents */,
+				59222E4D24B0EA0100016502 /* Modal */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		59222E0B24AFCB1D00016502 /* ListEvents */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1724AFCEFD00016502 /* Cell */,
+				59222E1924AFCF0D00016502 /* Controller */,
+			);
+			path = ListEvents;
+			sourceTree = "<group>";
+		};
+		59222E0C24AFCB3000016502 /* InitialCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59222E0D24AFCB4500016502 /* InitialCoordinator.swift */,
+			);
+			path = InitialCoordinator;
+			sourceTree = "<group>";
+		};
+		59222E1024AFCB6000016502 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1124AFCB7A00016502 /* CoordinatorProtocol.swift */,
+				59222E1324AFCB9C00016502 /* NavigationController.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		59222E1524AFCC5500016502 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4924B0DEE800016502 /* Fonts */,
+				59222DEE24AFBFB200016502 /* Assets.xcassets */,
+				59222DF024AFBFB200016502 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		59222E1624AFCCD300016502 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				59222DE924AFBFAD00016502 /* ViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		59222E1724AFCEFD00016502 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59222E2124AFD25400016502 /* ListEventTableViewCell.swift */,
+				59222E2224AFD25400016502 /* ListEventTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		59222E1924AFCF0D00016502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1B24AFCF3900016502 /* ListEventsViewModel.swift */,
+				59222E0724AFCB0600016502 /* ListEventsViewController.swift */,
+				59222E0824AFCB0600016502 /* ListEventsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59222E1D24AFD12000016502 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1E24AFD13900016502 /* Utils */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		59222E1E24AFD13900016502 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				59222E1F24AFD15500016502 /* CommonToUI.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		59222E2524AFF75D00016502 /* DetailEvents */ = {
+			isa = PBXGroup;
+			children = (
+				59222E2A24AFF7A900016502 /* Cell */,
+				59222E2B24AFF7AF00016502 /* Controller */,
+			);
+			path = DetailEvents;
+			sourceTree = "<group>";
+		};
+		59222E2A24AFF7A900016502 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4524B0D87C00016502 /* EventDetailTableViewCell.swift */,
+				59222E4624B0D87C00016502 /* EventDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		59222E2B24AFF7AF00016502 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				59222E3824B010F900016502 /* EventDetailViewController.swift */,
+				59222E3924B010F900016502 /* EventDetailViewController.xib */,
+				59222E3C24B0115D00016502 /* EventDetailViewModel.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59222E3E24B0D50A00016502 /* TabBarApp */ = {
+			isa = PBXGroup;
+			children = (
+				59222E3F24B0D54000016502 /* TabBarAppViewController.swift */,
+				59222E4024B0D54000016502 /* TabBarAppViewController.xib */,
+				59222E4324B0D6DE00016502 /* TabBarViewModel.swift */,
+			);
+			path = TabBarApp;
+			sourceTree = "<group>";
+		};
+		59222E4924B0DEE800016502 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4A24B0DF0600016502 /* Roboto-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		59222E4D24B0EA0100016502 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				59222E4E24B0EA7900016502 /* ModalViewController.swift */,
+				59222E4F24B0EA7900016502 /* ModalViewController.xib */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		8597F2A42F438585FC96704D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A1DF2056A7A5DC1F8A075F1 /* Pods-MockApi.debug.xcconfig */,
+				45BF92CC4185F3DE4CE61BD3 /* Pods-MockApi.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59222DE124AFBFAD00016502 /* MockApi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59222DF624AFBFB200016502 /* Build configuration list for PBXNativeTarget "MockApi" */;
+			buildPhases = (
+				399F00E7B7C7F6C02FC55301 /* [CP] Check Pods Manifest.lock */,
+				59222DDE24AFBFAD00016502 /* Sources */,
+				59222DDF24AFBFAD00016502 /* Frameworks */,
+				59222DE024AFBFAD00016502 /* Resources */,
+				C12138F32993813F731FCCD2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MockApi;
+			productName = MockApi;
+			productReference = 59222DE224AFBFAD00016502 /* MockApi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		59222DDA24AFBFAD00016502 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Edwy Lugo";
+				TargetAttributes = {
+					59222DE124AFBFAD00016502 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = 59222DDD24AFBFAD00016502 /* Build configuration list for PBXProject "MockApi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 59222DD924AFBFAD00016502;
+			productRefGroup = 59222DE324AFBFAD00016502 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59222DE124AFBFAD00016502 /* MockApi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59222DE024AFBFAD00016502 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59222E4224B0D54000016502 /* TabBarAppViewController.xib in Resources */,
+				59222DF224AFBFB200016502 /* LaunchScreen.storyboard in Resources */,
+				59222E0524AFCA8D00016502 /* event-response.json in Resources */,
+				59222DEF24AFBFB200016502 /* Assets.xcassets in Resources */,
+				59222E0A24AFCB0600016502 /* ListEventsViewController.xib in Resources */,
+				59222E5124B0EA7900016502 /* ModalViewController.xib in Resources */,
+				59222E2424AFD25400016502 /* ListEventTableViewCell.xib in Resources */,
+				59222DED24AFBFAD00016502 /* Main.storyboard in Resources */,
+				59222E4C24B0DF6D00016502 /* Roboto-Black.ttf in Resources */,
+				59222E3B24B010F900016502 /* EventDetailViewController.xib in Resources */,
+				59222E4824B0D87D00016502 /* EventDetailTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		399F00E7B7C7F6C02FC55301 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MockApi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12138F32993813F731FCCD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MockApi/Pods-MockApi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MockApi/Pods-MockApi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MockApi/Pods-MockApi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59222DDE24AFBFAD00016502 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59222E1424AFCB9C00016502 /* NavigationController.swift in Sources */,
+				59222E0324AFC9F700016502 /* EventManager.swift in Sources */,
+				59222E5324B0EFEB00016502 /* Checkin.swift in Sources */,
+				59222E0E24AFCB4500016502 /* InitialCoordinator.swift in Sources */,
+				59222E4124B0D54000016502 /* TabBarAppViewController.swift in Sources */,
+				59222E1224AFCB7A00016502 /* CoordinatorProtocol.swift in Sources */,
+				59222E2324AFD25400016502 /* ListEventTableViewCell.swift in Sources */,
+				59222E0924AFCB0600016502 /* ListEventsViewController.swift in Sources */,
+				59222DEA24AFBFAD00016502 /* ViewController.swift in Sources */,
+				59222E3D24B0115D00016502 /* EventDetailViewModel.swift in Sources */,
+				59222E4724B0D87C00016502 /* EventDetailTableViewCell.swift in Sources */,
+				59222DFB24AFC19600016502 /* MockREST.swift in Sources */,
+				59222E4424B0D6DE00016502 /* TabBarViewModel.swift in Sources */,
+				59222E2024AFD15500016502 /* CommonToUI.swift in Sources */,
+				59222DE624AFBFAD00016502 /* AppDelegate.swift in Sources */,
+				59222DE824AFBFAD00016502 /* SceneDelegate.swift in Sources */,
+				59222E1C24AFCF3900016502 /* ListEventsViewModel.swift in Sources */,
+				59222E5024B0EA7900016502 /* ModalViewController.swift in Sources */,
+				59222E0024AFC9A600016502 /* Observable.swift in Sources */,
+				59222E3A24B010F900016502 /* EventDetailViewController.swift in Sources */,
+				59222DFE24AFC1BE00016502 /* Event.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		59222DEB24AFBFAD00016502 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59222DEC24AFBFAD00016502 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		59222DF024AFBFB200016502 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59222DF124AFBFB200016502 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		59222DF424AFBFB200016502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		59222DF524AFBFB200016502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		59222DF724AFBFB200016502 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A1DF2056A7A5DC1F8A075F1 /* Pods-MockApi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83NFHDY43B;
+				INFOPLIST_FILE = MockApi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.edwylugo.MockApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		59222DF824AFBFB200016502 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45BF92CC4185F3DE4CE61BD3 /* Pods-MockApi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 83NFHDY43B;
+				INFOPLIST_FILE = MockApi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.edwylugo.MockApi;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59222DDD24AFBFAD00016502 /* Build configuration list for PBXProject "MockApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59222DF424AFBFB200016502 /* Debug */,
+				59222DF524AFBFB200016502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		59222DF624AFBFB200016502 /* Build configuration list for PBXNativeTarget "MockApi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59222DF724AFBFB200016502 /* Debug */,
+				59222DF824AFBFB200016502 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 59222DDA24AFBFAD00016502 /* Project object */;
+}

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventDetailTableViewCell" rowHeight="294" id="KGk-i7-Jjw" customClass="EventDetailTableViewCell" customModule="MockApi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="294"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XpZ-KP-DNB">
+                        <rect key="frame" x="4" y="0.0" width="312" height="294"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="qmF-nJ-LgF">
+                                <rect key="frame" x="0.0" y="0.0" width="312" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="BK0-wi-FQq"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKR-Mm-jfQ">
+                                <rect key="frame" x="0.0" y="223" width="312" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="ohN-aJ-uVD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBK-L2-BDH">
+                                <rect key="frame" x="16" y="253" width="88" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ZBK-L2-BDH" firstAttribute="leading" secondItem="XpZ-KP-DNB" secondAttribute="leading" constant="16" id="0bY-E2-4Ii"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBK-L2-BDH" secondAttribute="trailing" constant="16" id="TC4-se-RNm"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="XpZ-KP-DNB" secondAttribute="trailing" constant="4" id="QMR-dm-ypm"/>
+                    <constraint firstAttribute="bottom" secondItem="XpZ-KP-DNB" secondAttribute="bottom" id="Qvn-AN-HmN"/>
+                    <constraint firstItem="XpZ-KP-DNB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ywk-Jl-o1u"/>
+                    <constraint firstItem="XpZ-KP-DNB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="jcB-2E-xqV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionEvent" destination="ZBK-L2-BDH" id="wfY-kL-qbY"/>
+                <outlet property="ivEvent" destination="qmF-nJ-LgF" id="3eV-8X-ued"/>
+                <outlet property="priceEvent" destination="vKR-Mm-jfQ" id="N3Q-oa-ix0"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="196.20535714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default" width="1280" height="1024"/>
+    </resources>
+</document>
